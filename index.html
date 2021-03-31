@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/index.js"></script>
+    <script src="./vue/Observer.js"></script>
+    <script src="./vue/Compiler.js"></script>
+    <script src="./vue/Watcher.js"></script>
+    <script src="./vue/Dep.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h3>{{ msg }}</h3>
+        <input type="text" v-model="inputText"/>
+        <p>input文本框v-model内容：{{ inputText }}</p>
+        <p>v-text: </p>
+        <p v-text="inputText"></p>
+    </div>
+</body>
+<script>
+    var vue = new Vue({
+        el: '#app',
+        data: {
+            msg: '这是简易的vue响应式框架',
+            inputText: '默认的文本内容'
+        }
+    })
+</script>
+</html>
