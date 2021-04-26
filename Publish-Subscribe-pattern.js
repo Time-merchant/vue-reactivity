@@ -6,7 +6,7 @@ class EventEmitter {
         if (this.cache[name]) {
             // 防止重复注册同一事件
             !this.cache[name].includes(fn) && this.cache[name].push(fn);
-        } esle {
+        } else {
             this.cache[name] = [fn];
         }
     }
