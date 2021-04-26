@@ -5,7 +5,7 @@ class Compiler {
         this.compile(this.el);
     }
 
-    // 编译模板，处理文本节点（差值表达式）和元素节点（指令）
+    // 编译模板，处理文本节点（插值表达式）和元素节点（指令）
     compile(el) {
         const childNodes = el.childNodes; // 伪数组
         Array.from(childNodes).forEach(node => {
